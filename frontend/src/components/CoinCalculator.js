@@ -39,38 +39,58 @@ const CoinCalculator = () => {
   };
 
   return (
-    <div className="coin-calculator">
-      <h1>Coin Calculator</h1>
-      <form onSubmit={handleCalculate}>
-        <div className="form-group">
-          <label>Target Amount:</label>
-          <input
-            type="text"
-            value={targetAmount}
-            onChange={(e) => setTargetAmount(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Coin Denominations (comma-separated):</label>
-          <input
-            type="text"
-            value={denominations}
-            onChange={(e) => setDenominations(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Calculate</button>
-      </form>
+    <div className="gradient-background">
+      <div className="calculator-wrapper">
+        <h1>Coin Counter</h1>
+        <form onSubmit={handleCalculate} className="form-layout">
+          <div className="input-wrapper">
+            <label htmlFor="targetAmount">Target Amount</label>
+            <input
+              type="number"
+              id="targetAmount"
+              value={targetAmount}
+              onChange={(e) => setTargetAmount(e.target.value)}
+              placeholder="0.00"
+            />
+          </div>
 
-      {result && (
-        <div className="result">
-          <h3>Result:</h3>
-          <p>{result.join(', ')}</p>
-        </div>
-      )}
+          <div className="input-wrapper">
+            <label htmlFor="denominations">Denominations</label>
+            <input
+              type="text"
+              id="denominations"
+              value={denominations}
+              onChange={(e) => setDenominations(e.target.value)}
+              placeholder="e.g., 1, 5, 10"
+            />
+          </div>
 
-      {error && <div className="error">{error}</div>}
+          <button type="submit" className="action-button">
+            Calculate
+          </button>
+        </form>
+
+        {result && (
+          <div className="result-display">
+            <h2>Result</h2>
+            <p>{result.join(', ')}</p>
+          </div>
+        )}
+
+        {error && <div className="error-display">{error}</div>}
+
+        <button
+          onClick={() => {
+            setTargetAmount('');
+            setDenominations('');
+            setResult(null);
+            setError(null);
+          }}
+          className="reset-button"
+        >
+          Reset
+        </button>
+      </div>
     </div>
   );
 };

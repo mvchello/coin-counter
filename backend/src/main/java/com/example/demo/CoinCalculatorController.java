@@ -7,6 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/coins")
+@CrossOrigin(origins = "http://localhost:3000") // Add this annotation for CORS
 public class CoinCalculatorController {
 
     @PostMapping("/minimum")

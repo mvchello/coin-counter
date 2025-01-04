@@ -1,82 +1,129 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9; /* Light background for contrast */
-  color: #333;
-  margin: 0;
+/* Full-page gradient background */
+.gradient-background {
   height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Calculator container (card) */
+.calculator-wrapper {
+  width: 90%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content horizontally */
+}
+
+/* Header */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0077b6;
+  text-align: center;
+}
+
+/* Form layout */
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%; /* Ensure the form takes full width of the card */
+  align-items: center; /* Center inputs inside the form */
+}
+
+/* Input wrapper */
+.input-wrapper {
+  width: 100%; /* Make input wrapper take full width */
+  max-width: 400px; /* Limit the input field's width for better appearance */
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
 }
 
-.coin-calculator {
-  margin-top: 40px; /* Padding from the top */
-  padding: 30px;
-  width: 100%;
-  max-width: 400px; /* Responsive width */
-  background: #fff; /* White background for the form */
-  border-radius: 12px; /* Rounded corners for modern look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  text-align: center;
-  border: 1px solid #ddd; /* Subtle border */
-}
-
-h1 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
 label {
-  display: block;
   font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  color: #0077b6;
 }
 
 input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #dde3e4;
+  border-radius: 15px;
+  outline: none;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #333;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
+/* Action buttons */
+.action-button {
+  width: 100%; /* Button takes full width */
+  max-width: 200px;
+  padding: 12px 30px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background: #2a9d8f;
+  color: white;
   font-size: 16px;
   font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.action-button:hover {
+  background: #21867a;
 }
 
-.result {
-  margin-top: 20px;
-  padding: 10px;
-  background: #e6ffed;
-  border: 1px solid #b2f5ea;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.error {
-  margin-top: 20px;
-  color: red;
-  font-size: 14px;
+.reset-button {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+  padding: 12px 30px;
+  border: none;
+  background: #e63946;
+  color: white;
+  font-size: 16px;
   font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #ba2d3d;
+}
+
+/* Result/Error display */
+.result-display,
+.error-display {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.result-display {
+  background: #d8f3dc;
+  color: #2a9d8f;
+}
+
+.error-display {
+  background: #ffcccc;
+  color: #c1121f;
 }
