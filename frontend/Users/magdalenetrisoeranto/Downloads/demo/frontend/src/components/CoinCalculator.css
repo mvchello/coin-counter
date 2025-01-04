@@ -1,0 +1,82 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9; /* Light background for contrast */
+  color: #333;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.coin-calculator {
+  margin-top: 40px; /* Padding from the top */
+  padding: 30px;
+  width: 100%;
+  max-width: 400px; /* Responsive width */
+  background: #fff; /* White background for the form */
+  border-radius: 12px; /* Rounded corners for modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center;
+  border: 1px solid #ddd; /* Subtle border */
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e6ffed;
+  border: 1px solid #b2f5ea;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.error {
+  margin-top: 20px;
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
