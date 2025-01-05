@@ -1,11 +1,11 @@
 import './App.css';
 import React from 'react';
-import CoinCalculator from './components/CoinCalculator';
+import CoinCounter from './components/CoinCounter';
 
 function App() {
   return (
     <div className="App">
-      <CoinCalculator />
+      <CoinCounter />
     </div>
   );
 }

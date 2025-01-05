@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './CoinCalculator.css';
+import './CoinCounter.css';
 import axios from 'axios';
 
-const CoinCalculator = () => {
+const CoinCounter = () => {
   const [targetAmount, setTargetAmount] = useState('');
   const [denominations, setDenominations] = useState('');
   const [result, setResult] = useState(null);
@@ -27,7 +27,7 @@ const CoinCalculator = () => {
       const response = await axios.post('http://localhost:8080/api/coins/minimum', {
         targetAmount: parseFloat(targetAmount),
         denominations: denominationArray,
-      });
+      });            
 
       const sortedResult = response.data.sort((a, b) => a - b);
       setResult(sortedResult);
@@ -40,7 +40,7 @@ const CoinCalculator = () => {
 
   return (
     <div className="gradient-background">
-      <div className="calculator-wrapper">
+      <div className="counter-wrapper">
         <h1>Coin Counter</h1>
         <form onSubmit={handleCalculate} className="form-layout">
           <div className="input-wrapper">
@@ -95,4 +95,4 @@ const CoinCalculator = () => {
   );
 };
 
-export default CoinCalculator;
+export default CoinCounter;

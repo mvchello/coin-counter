@@ -10,8 +10,8 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Calculator container (card) */
-.calculator-wrapper {
+/* Counter container (card) */
+.counter-wrapper {
   width: 90%;
   max-width: 500px;
   background: #ffffff;

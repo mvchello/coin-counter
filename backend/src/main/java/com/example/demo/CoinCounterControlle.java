@@ -8,13 +8,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/coins")
 @CrossOrigin(origins = "http://localhost:3000") // Add this annotation for CORS
-public class CoinCalculatorController {
+public class CoinCounterControlle {
 
     @PostMapping("/minimum")
     public ResponseEntity<?> getMinimumCoins(@RequestBody CoinRequest request) {
         try {
             System.out.println("Request received: " + request);
-            List<Double> result = CoinCalculator.getMinimumCoins(request.getTargetAmount(), request.getDenominations());
+            List<Double> result = CoinCounter.getMinimumCoins(request.getTargetAmount(), request.getDenominations());
             System.out.println("Result calculated: " + result);
             return ResponseEntity.ok(result);
         } catch (Exception e) {

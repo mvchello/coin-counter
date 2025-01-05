@@ -2,7 +2,7 @@ package com.example.demo;
 
 import java.util.*;
 
-public class CoinCalculator {
+public class CoinCounter {
 
     // Method to calculate minimum coins
     public static List<Double> getMinimumCoins(double targetAmount, List<Double> denominations) {
